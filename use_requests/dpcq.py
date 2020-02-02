@@ -5,7 +5,7 @@ from io import BytesIO
 
 
 def one_chapter(url, number):   # 地址,章节数
-    for i in range(1, 40):         # 单张图片下载
+    for i in range(1, 60):         # 单张图片下载
         url1 = url+str(i)+'.jpg-mht.middle.webp'    # 单张图片地址
         try:                   # 下载过程
             img = requests.get(url1, timeout=30)
@@ -32,16 +32,16 @@ def one_chapter(url, number):   # 地址,章节数
 
 def main():
     url_head = 'https://mhpic.manhualang.com/comic/D/%E6%96%97%E7%A0%B4%E8%8B%8D%E7%A9%B9%E6%8B%86%E5%88%86%E7%89%88/'
-    url_tail = '%E8%AF%9D/'
+    url_tail = '%E8%AF%9DGQV/'
     tag1 = 1
     tag2 = 1
-    i = 733
+    i = 794
     while tag1:
         url = url_head + str(i) + url_tail
         tag1 = one_chapter(url, i)
         i += 1
     i -= 1
-    url_tail = url_tail.replace('/', 'GQ/')         # 根据实际变动替换
+    url_tail = url_tail.replace('V/', '/')         # 根据实际变动替换
     while tag2:
         url = url_head + str(i) + url_tail
         tag2 = one_chapter(url, i)

@@ -1,6 +1,6 @@
 import requests
 
-url = "https://www.amazon.cn/gp/product/B01M8L5Z3Y"
+url = "https://www.tianqi.com/wuhan/"
 try:
     kv = {'user-agent': 'Mozilla/5.0'}
     r = requests.get(url, headers=kv)
