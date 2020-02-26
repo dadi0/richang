@@ -35,7 +35,7 @@ def main():
     url_tail = '%E8%AF%9DGQV/'
     tag1 = 1
     tag2 = 1
-    i = 794
+    i = 820
     while tag1:
         url = url_head + str(i) + url_tail
         tag1 = one_chapter(url, i)
